@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MP3 Player</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="h-screen">
+  
+  <div class="bg-white px-20 py-12 rounded">
+    <div id="progress" class="w-100 bg-gray-400 h-8 rounded-full">
+      <div id="growth" class="bg-green-600 h-full w-0 rounded-full"></div>
+    </div>
+    <div class="flex justify-end">
+      <h5 id="percent" class="mt-4 mb-2">0%</h5>
+    </div>
+    <div class="flex justify-between">
+      <h3>Song.mp3</h3>
+      <button class="bg-yellow-600 px-4 py-1.5 rounded-full text-white font-medium active:scale-95 cursor-pointer">Download File</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: #111;
+      font-size: 80px;
+      
+    }
+    #hero{
+      background-color: powderblue;
+    }
+    #heroine{
+      background-color: pink;
+    }
+
+    img{
+      height: 500px;
+    }
+
+    button{
+      padding: 12px 24px;
+      background-color: black;
+      color: white;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #box{
+      width: 200px;
+      height: 200px;
+      background-color: powderblue;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="hero" class="sam">I am h1</h1>
+
+  <img src="https://img.freepik.com/free-photo/portrait-pretty-woman-sunglasses-hat-blue-colorful-wall_231208-545.jpg?ga=GA1.1.1105411247.1749869276&semt=ais_hybrid&w=740" alt="">
+  <br>
+
+  <button>Change Image</button>
+
+  <div id="box"></div>
+
+  <script>
+
+    //getAttribute & setAttribute
+    const btn = document.querySelector('button')
+
+    btn.addEventListener('click', function(){
+      const img = document.querySelector('img')
+    img.setAttribute('src', 'https://img.freepik.com/premium-photo/portrait-young-pretty-woman-with-curly-hairstyle-gray-background_144962-15979.jpg?ga=GA1.1.1105411247.1749869276&semt=ais_hybrid&w=740')
+    })
+
+    //createElement
+    const x = Math.random()*90
+    const body = document.querySelector('body')
+    const img = document.createElement('img')
+
+    img.setAttribute('src', 'https://img.freepik.com/free-photo/portrait-beautiful-happy-cute-sexy-brunette-woman-with-red-lips-wide-classic-pants-white-background_158538-9385.jpg?ga=GA1.1.1105411247.1749869276&semt=ais_hybrid&w=740')
+
+    body.appendChild(img)
+    img.style.borderRadius = '20px'
+    img.style.rotate = x+'deg' 
+
+    //dblclick
+    const box = document.querySelector('#box')
+    box.addEventListener('dblclick', function(){
+      box.style.backgroundColor = 'red'
+    })
+
+    //mouseenter
+    // box.addEventListener('mouseenter', function(){
+    //   box.style.borderRadius = '40px'
+    // })
+
+    //mouseleave
+    // box.addEventListener('mouseleave', function(){
+    //   alert('mouse left')
+    // })
+
+    //mousemove
+    box.addEventListener('mousemove', function(){
+      box.style.border = '6px solid blue'
+    })
+    
+
+
+   
+
+
+    
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM-and-browser-functionalities-in-js</title>
+  <style>
+    div{
+      width: 300px;
+      height: 300px;
+      background-color: aqua;
+    }
+
+    .circle{
+      border-radius: 50%;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <!-- <a href="https://www.google.com/"><h1>hello</h1></a>
+  
+  <button id="btn1">Backward</button>
+  <button id="btn2">Forward</button> -->
+
+  <div>
+
+  </div>
+  
+  <script>
+    // const btn1 = document.querySelector('#btn1')
+    // btn1.addEventListener('click', ()=>{
+    //   // location.href = 'https://www.google.com/'
+    //   // location.reload()
+    //   history.back()
+    // })
+
+    // const btn2 = document.querySelector('#btn2')
+    // btn2.addEventListener('click', ()=>{
+    //   history.forward()
+    // })
+
+    //localStorage
+
+    // //set item in the local storage
+    // localStorage.setItem('name', 'Ali')
+    // localStorage.setItem('age', 19)
+
+    // //get item from the local storage
+    // let x = localStorage.getItem('name')
+    // console.log(x)
+
+    // //remove a particular item from the local storage
+    // localStorage.removeItem('age')
+
+    // //remove all the item from local storage
+    // localStorage.clear()
+
+    //save objects in local storage using JSON.stringify
+
+    let users = [
+      {
+        name: 'Ali',
+        age: 20
+      },
+      {
+        name: 'Rehan',
+        age: 12
+      },
+      {
+        name: 'Fiza',
+        age: 18
+      }
+    ]
+
+    //object to string conversion
+    let newUsers = JSON.stringify(users)
+    localStorage.setItem('user-details', newUsers)
+    localStorage.removeItem('users')
+
+    //string to object conversion
+    let toObject = JSON.parse(newUsers)
+    console.log(toObject)
+
+    console.log(newUsers)
+
+    //add and remove class from any html element
+    const div = document.querySelector('div')
+    div.classList.add('circle')
+
+    //remove class
+    div.classList.remove('circle')
+
+   
+
+
+
+   
+    
+    
+  </script>
+</body>
+</html>

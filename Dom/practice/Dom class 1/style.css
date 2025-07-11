@@ -1,0 +1,38 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box{
+  background-color: white;
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.friend{
+  margin: 10px 10px;
+}
+
+button{
+  padding: 10px 22px;
+  background-color: rgb(43, 43, 241);
+  color: white;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
