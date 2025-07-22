@@ -16,6 +16,7 @@
 // }
 
 // // call back hell
+
 // stepOne(()=>{
 //   stepTwo(()=>{
 //     stepThree(()=>{
@@ -28,6 +29,7 @@
 
 
 // promises
+
 // function stepOne() {
 //   return new Promise((res, rej) => {
 //     console.log('step 1');
